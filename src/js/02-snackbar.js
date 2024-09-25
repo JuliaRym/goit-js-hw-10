@@ -24,7 +24,7 @@ form.addEventListener('submit', event => {
     });
 });
 
-function createPromise(delay, state) {
+const createPromise = (delay, state) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
@@ -34,4 +34,4 @@ function createPromise(delay, state) {
       }
     }, delay);
   });
-}
+};
